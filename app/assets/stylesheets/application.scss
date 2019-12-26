@@ -13,34 +13,39 @@
  *= require_tree .
  *= require_self
  */
- $white_opaque: rgba(250, 250, 250, .3);
- $dark: #1F7972;
+
+@import "materialize";
+@import "https://fonts.googleapis.com/icon?family=Material\Icons";
+
+$white_opaque: rgba(250, 250, 250, .3);
+$dark: #1F7972;
 
 * {
 	box-sizing: border-box;
 }
+
 html {
-  height: 100%;
+	height: 100%;
 }
 
 body {
- 	height: 100%;
-  background: -webkit-linear-gradient(40deg, #4CB8C4 10%, #EAECC6 100%);
-  background:    -moz-linear-gradient(40deg, #4CB8C4 10%, #EAECC6 100%);
-  background:     -ms-linear-gradient(40deg, #4CB8C4 10%, #EAECC6 100%);
-  background:      -o-linear-gradient(40deg, #4CB8C4 10%, #EAECC6 100%);
-  background:         linear-gradient(40deg, #4CB8C4 10%, #EAECC6 100%);
-  font-family: 'Lato', sans-serif;
+	height: 100%;
+	background: -webkit-linear-gradient(40deg, #4CB8C4 10%, #EAECC6 100%);
+	background: -moz-linear-gradient(40deg, #4CB8C4 10%, #EAECC6 100%);
+	background: -ms-linear-gradient(40deg, #4CB8C4 10%, #EAECC6 100%);
+	background: -o-linear-gradient(40deg, #4CB8C4 10%, #EAECC6 100%);
+	background: linear-gradient(40deg, #4CB8C4 10%, #EAECC6 100%);
+	font-family: 'Lato', sans-serif;
 }
 
 .clearfix:before,
 .clearfix:after {
-    content: " ";
-    display: table;
+	content: " ";
+	display: table;
 }
 
 .clearfix:after {
-    clear: both;
+	clear: both;
 }
 
 #notice {
@@ -56,8 +61,8 @@ body {
 	background: $white_opaque;
 	margin: 3em auto 0 auto;
 	border-radius: 7px;
-	-webkit-box-shadow: 0 0 4px 3px rgba(0,0,0,.3);
-	box-shadow: 0 0 4px 4px rgba(0,0,0,.03);
+	-webkit-box-shadow: 0 0 4px 3px rgba(0, 0, 0, .3);
+	box-shadow: 0 0 4px 4px rgba(0, 0, 0, .03);
 	padding: 1em 0;
 }
 
@@ -68,10 +73,12 @@ body {
 	text-transform: uppercase;
 	color: white;
 	margin: 0;
+
 	a {
 		text-decoration: none;
 		color: white;
 		transition: all .4s ease-in-out;
+
 		&:hover {
 			opacity: 0.4;
 		}
@@ -88,7 +95,8 @@ body {
 
 .index_row {
 	padding: 2em;
-	border-bottom: 1px solid rgba(250,250,250, .3);
+	border-bottom: 1px solid rgba(250, 250, 250, .3);
+
 	.todo_list_sub_title {
 		margin-bottom: 0;
 	}
@@ -97,18 +105,21 @@ body {
 #todo_items_wrapper {
 	.row {
 		width: 100%;
-		border-top: 1px solid rgba(250,250,250, .3);
-		border-bottom: 1px solid rgba(250,250,250, .3);
+		border-top: 1px solid rgba(250, 250, 250, .3);
+		border-bottom: 1px solid rgba(250, 250, 250, .3);
+
 		.complete {
 			width: 10%;
 			float: left;
 			text-align: center;
-			border-right: 1px solid rgba(250,250,250, .3);
+			border-right: 1px solid rgba(250, 250, 250, .3);
 			padding: 1em 0;
 		}
+
 		.todo_item {
 			width: 80%;
 			float: left;
+
 			p {
 				margin: 0;
 				padding: 1em;
@@ -116,37 +127,43 @@ body {
 				font-weight: 100;
 			}
 		}
+
 		.trash {
 			width: 10%;
 			float: left;
 			text-align: center;
-			border-left: 1px solid rgba(250,250,250, .3);
+			border-left: 1px solid rgba(250, 250, 250, .3);
 			padding: 1em 0;
 		}
+
 		i {
 			color: white;
 			transition: all .4s ease-in-out;
+
 			&:hover {
 				color: $dark;
 			}
 		}
 	}
+
 	#form {
 		margin-top: 2em;
 		padding: 0 5%;
+
 		input[type="text"] {
 			width: 72%;
 			margin-right: 2%;
 			display: inline-block;
 			outline: none;
-			background: rgba(250,250,250,.4);
+			background: rgba(250, 250, 250, .4);
 			border: none;
 			height: 40px;
 			border-radius: 4px;
 			padding: 1em 2em;
 		}
+
 		input[type="submit"] {
-			background: rgba(250,250,250,.4);
+			background: rgba(250, 250, 250, .4);
 			outline: none;
 			border: none;
 			height: 40px;
@@ -155,11 +172,15 @@ body {
 			display: inline-block;
 			transition: all .4s ease-in-out;
 			cursor: pointer;
+
 			&:hover {
 				background: $dark;
 			}
 		}
-		::-webkit-input-placeholder { color: $dark; }
+
+		::-webkit-input-placeholder {
+			color: $dark;
+		}
 	}
 }
 
@@ -169,6 +190,7 @@ body {
 	text-align: center;
 	font-size: 0.8em;
 	color: white;
+
 	a {
 		color: white;
 	}
@@ -177,23 +199,28 @@ body {
 .forms {
 	padding: 0 5%;
 }
+
 label {
 	color: $dark;
 }
-input[type="text"], textarea {
+
+input[type="text"],
+textarea {
 	width: 100%;
 	margin: .5em 2% 1em 0;
 	display: inline-block;
 	outline: none;
-	background: rgba(250,250,250,.4);
+	background: rgba(250, 250, 250, .4);
 	border: none;
 	height: 40px;
 	border-radius: 4px;
 	padding: 1em 2em;
 }
+
 textarea {
 	height: 200px;
 }
+
 input[type="submit"] {
 	background: white;
 	outline: none;
@@ -205,9 +232,13 @@ input[type="submit"] {
 	transition: all .4s ease-in-out;
 	cursor: pointer;
 	color: $dark;
+
 	&:hover {
 		background: $dark;
 		color: white;
 	}
 }
-::-webkit-input-placeholder { color: $dark; }
+
+::-webkit-input-placeholder {
+	color: $dark;
+}
